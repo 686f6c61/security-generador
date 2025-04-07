@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.password-generator-area {
+  height: 200px;
+  border: 2px dashed #1976d2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.password-generator-area:hover {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+.generated-password-text {
+  font-size: 28px;
+  font-weight: bold;
+  word-break: break-all;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  user-select: all;
+  cursor: pointer;
+}
+
+/* Estilos para la información de la contraseña */
+.password-info {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Clases para la fortaleza de la contraseña */
+.strength-very-weak { color: #d32f2f; }
+.strength-weak { color: #f57c00; }
+.strength-reasonable { color: #fbc02d; }
+.strength-strong { color: #388e3c; }
+.strength-very-strong { color: #1976d2; }
+
+/* Estilos para el widget de notificación */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .generated-password-text {
+    font-size: 20px;
+  }
+} 
